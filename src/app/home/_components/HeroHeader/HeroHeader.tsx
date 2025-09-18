@@ -18,7 +18,7 @@ function HeroHeader() {
         backgroundSize: "min(1265px, 120vw) auto, min(145px, 30vw) auto",
       }}
     >
-      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1360px] flex-col px-4 pb-16 pt-8 sm:px-8 lg:px-[40px] lg:pt-10">
+      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1920px] flex-col px-4 pb-16 pt-8 sm:px-8 lg:px-[40px] lg:pt-10">
         <header className="flex w-full flex-wrap items-center justify-between gap-6 text-white">
           <img
             src={logo}
@@ -83,8 +83,8 @@ function HeroHeader() {
           </nav>
         </header>
 
-        <div className="mt-16 flex flex-1 flex-col-reverse items-center gap-14 lg:mt-24 lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex w-full flex-col items-center text-center lg:max-w-[640px] lg:items-start lg:text-left lg:flex-1">
+        <div className="mx-auto mt-16 flex w-full max-w-[1360px] flex-1 flex-col-reverse items-center gap-14 lg:mt-24 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex w-full flex-col items-center text-center lg:max-w-[640px] lg:flex-1 lg:items-start lg:text-left">
             <h1
               className="font-bold text-black leading-[1.1] text-[42px] sm:text-[52px] lg:text-[67px]"
               style={{ fontFamily: FF }}
