@@ -6,6 +6,7 @@ import CTAButton from "../../../../_components/CTAButton";
 import buttonIcon from "./_assets/hero-cta-icon.png";
 
 const FF = "PingFang SC-Bold";
+const PAGE_CONTAINER = "mx-auto w-full max-w-[1360px] px-[40px]";
 
 function HeroHeader() {
   return (
@@ -24,72 +25,74 @@ function HeroHeader() {
         className="pointer-events-none absolute -bottom-10 left-0 hidden lg:block"
         style={{ width: "min(145px, 18vw)", maxWidth: "145px", height: "auto" }}
       />
-      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1920px] flex-col px-4 pb-16 pt-8 sm:px-8 lg:px-[40px] lg:pt-10">
-        <header className="flex w-full flex-wrap items-center justify-between gap-6 text-[#74B4D4] lg:text-white">
-          <img
-            src={logo}
-            alt="Melfish logo"
-            className="h-[49.51px] w-[189.91px] max-w-full"
-          />
-          <nav className="w-full sm:w-auto">
-            <ul className="group/menus flex flex-wrap items-center justify-center gap-6 text-base lg:gap-[106px]">
-              <li className="group flex h-[25px] items-center">
-                <a
-                  href="#"
-                  className="relative block transition-colors duration-300"
-                  style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                >
-                  About Us
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
-                  />
-                </a>
-              </li>
-              <li className="group flex h-[25px] items-center">
-                <a
-                  href="#"
-                  className="relative block transition-colors duration-300"
-                  style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                >
-                  Products
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
-                  />
-                </a>
-              </li>
-              <li className="group flex h-[25px] items-center">
-                <a
-                  href="#"
-                  className="relative block transition-colors duration-300"
-                  style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                >
-                  Blog
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
-                  />
-                </a>
-              </li>
-              <li className="group flex h-[25px] items-center">
-                <a
-                  href="#"
-                  className="relative block transition-colors duration-300"
-                  style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                >
-                  See All Service
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-[50px] -translate-x-1/2 rounded-full bg-white opacity-100 transition-[opacity,width] duration-300 ease-out group-hover/menus:w-0 group-hover/menus:opacity-0 hover:!w-[50px] hover:!opacity-100"
-                  />
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1920px] flex-col pb-16 pt-8 lg:pt-10">
+        <div className={`${PAGE_CONTAINER}`}>
+          <header className="flex w-full flex-wrap items-center justify-between gap-6 text-[#74B4D4] lg:text-white">
+            <img
+              src={logo}
+              alt="Melfish logo"
+              className="h-[49.51px] w-[189.91px] max-w-full"
+            />
+            <nav className="w-full sm:w-auto">
+              <ul className="group/menus flex flex-wrap items-center justify-center gap-6 text-base lg:gap-[106px]">
+                <li className="group flex h-[25px] items-center">
+                  <a
+                    href="#"
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
+                  >
+                    About Us
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
+                    />
+                  </a>
+                </li>
+                <li className="group flex h-[25px] items-center">
+                  <a
+                    href="#"
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
+                  >
+                    Products
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
+                    />
+                  </a>
+                </li>
+                <li className="group flex h-[25px] items-center">
+                  <a
+                    href="#"
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
+                  >
+                    Blog
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-white opacity-0 transition-[opacity,width] duration-300 ease-out group-hover:opacity-100 group-hover:w-[50px]"
+                    />
+                  </a>
+                </li>
+                <li className="group flex h-[25px] items-center">
+                  <a
+                    href="#"
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
+                  >
+                    See All Service
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-1/2 -bottom-2 h-[3px] w-[50px] -translate-x-1/2 rounded-full bg-white opacity-100 transition-[opacity,width] duration-300 ease-out group-hover/menus:w-0 group-hover/menus:opacity-0 hover:!w-[50px] hover:!opacity-100"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+        </div>
 
-        <div className="mx-auto mt-16 flex w-full max-w-[1360px] flex-1 flex-col-reverse items-center gap-14 lg:mt-24 lg:flex-row lg:items-end lg:justify-between">
+        <div className={`${PAGE_CONTAINER} mt-16 flex flex-1 flex-col-reverse items-center gap-14 lg:mt-24 lg:flex-row lg:items-end lg:justify-between`}>
           <div className="flex w-full flex-col items-center text-center lg:max-w-[640px] lg:flex-1 lg:items-start lg:text-left">
             <h1
               className="font-bold text-black leading-[1.1] text-[42px] sm:text-[52px] lg:text-[67px]"
