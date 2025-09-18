@@ -5,7 +5,6 @@ import logo2x from "./_assets/footer-logo-2x.png";
 
 const BG = "#232F37 ";
 const FF = "PingFang SC, PingFang SC";
-const paragraph = "1.125rem";
 function SiteFooter() {
   return (
     <section
@@ -31,21 +30,24 @@ function SiteFooter() {
           </a>
 
           {/* 导航：默认仅最后一个高亮；悬停时仅悬停项高亮 */}
-         <nav>
-              <ul className="group/menus flex text-white space-x-6 items-center">
+         <nav className="absolute right-[320px] top-[50px]">
+            <ul
+              className="group/menus flex text-white items-center"
+              style={{ gap: "106px" }}
+            >
                 {/* About Us */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     About Us
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -54,18 +56,18 @@ function SiteFooter() {
                 </li>
 
                 {/* Products */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     Products
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -74,18 +76,18 @@ function SiteFooter() {
                 </li>
 
                 {/* Blog */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     Blog
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -94,18 +96,18 @@ function SiteFooter() {
                 </li>
 
                 {/* See All Service —— 默认显示；当鼠标移到其它项时自动隐藏 */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     See All Service
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] rounded-full bg-white
+                        -bottom-2 h-[3px] rounded-full bg-white
                         transition-[opacity,width] duration-300 ease-out
                         w-[50px] opacity-100
                         group-hover/menus:w-0 group-hover/menus:opacity-0   /* 鼠标在任何菜单项上时先收起 */
