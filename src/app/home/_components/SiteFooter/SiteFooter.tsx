@@ -12,9 +12,9 @@ function SiteFooter() {
       style={{ backgroundColor: BG }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5">
-        {/* 顶部：小屏两行，md 及以上同一行 */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          {/* Logo 单独一行（小屏） */}
+        {/* 顶部：小屏堆叠，md 起与导航同列排布 */}
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
+          {/* Logo */}
           <a
             href="/"
             className="inline-flex items-center justify-center md:justify-start w-[253px] h-[65.96px] shrink-0"
@@ -30,10 +30,9 @@ function SiteFooter() {
           </a>
 
           {/* 导航：默认仅最后一个高亮；悬停时仅悬停项高亮 */}
-         <nav className="absolute right-[320px] top-[50px]">
+          <nav className="w-full md:w-auto">
             <ul
-              className="group/menus flex text-white items-center"
-              style={{ gap: "106px" }}
+              className="group/menus flex flex-wrap items-center justify-center gap-6 text-white md:justify-end md:gap-10 lg:gap-[106px]"
             >
                 {/* About Us */}
                 <li className="group flex h-[25px] items-center">
@@ -116,15 +115,13 @@ function SiteFooter() {
                     />
                   </a>
                 </li>
-              </ul>
-            </nav>
-
-
+            </ul>
+          </nav>
         </div>
 
         {/* 细分割线 —— 1280px 宽，1px，白色10%，虚线，居中 */}
         <hr
-          className="mt-6 mx-auto w-[1280px] border-0 border-t border-dashed border-white/10"
+          className="mt-6 mx-auto w-full max-w-[1280px] border-0 border-t border-dashed border-white/10"
         />
 
         {/* 中部：标题 + 副标题*/}
@@ -142,7 +139,7 @@ function SiteFooter() {
         
           <p
             className="
-              mx-auto mt-3 text-center font-medium whitespace-nowrap px-4
+              mx-auto mt-3 max-w-[540px] px-4 text-center font-medium
             "
             style={{
               color: "#5DAFCF",
