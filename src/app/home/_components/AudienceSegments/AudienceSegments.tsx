@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import TitleWithCircle from "../../../../_components/TitleWithCircle";
+import CTAButton from "../../../../_components/CTAButton";
 
 import startups1x from "./_assets/audience-startups-1x.png";
 import startups2x from "./_assets/audience-startups-2x.png";
@@ -19,11 +20,11 @@ const PAGE_MAXW = "max-w-[1360px]";
 
 const block1Color = "#F1FAFD";
 const block2Color = "#F7F7F7";
-const buttonColor = "#2D7597";
 const barColor = "#71C6E5";
 const TEXT_MAIN = "#000000";
 const TEXT_MID = "#000000b3"; // 70% 黑
 const urlHireUs = "#";
+const buttonColor = "#2D7597";
 
 /* ========= 图片集合 ========= */
 const icons = {
@@ -231,21 +232,16 @@ function AudienceCta() {
         </p>
 
         {/* 按钮（固定 rem 尺寸） */}
-        <a
-          href={urlHireUs}
-          className="
-            mt-6 inline-flex items-center justify-center
-            rounded-full text-white transition
-          "
-          style={{
-            backgroundColor: buttonColor,
-            fontFamily: FF,
-            width: "7.3125rem", // 117px
-            height: "3.5rem", // 56px
+        <CTAButton
+          label="Hire Us"
+          className="mt-6"
+          width={117}
+          height={56}
+          backgroundColor={buttonColor}
+          onClick={() => {
+            window.location.href = urlHireUs;
           }}
-        >
-          Hire Us
-        </a>
+        />
       </div>
 
       <div className="flex overflow-hidden rounded-2xl sm:justify-center md:justify-end">
