@@ -5,49 +5,53 @@ import background1 from "./_assets/hero-bg-right.png";
 import background2 from "./_assets/hero-bg-left.png";
 import buttonImage from "./_assets/hero-cta-icon.png";
 
-const FF = "PingFang SC, PingFang SC";
+const FF = "PingFang SC-Bold";
 // 颜色
 const button_color = "#2D7597";
 const button_hover_color = "#3385AB";
 const button_hover_shadow = "0 16px 32px rgba(0, 0, 0, 0.25)";
 
 // 字体大小常量
-const title = "3.75rem";
-const paragraph = "1.125rem";
+const title = "67px";
 function HeroHeader() {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
     <>
       <section
-        className="bg-no-repeat h-[90vh]"
+        className="relative bg-no-repeat h-[890px]"
         style={{
           backgroundImage: `url(${background1}), url(${background2})`,
           backgroundRepeat: 'no-repeat, no-repeat',
           backgroundPosition: 'right top, left bottom',
-          // 右侧大图：高度跟 section 一样（= 90vh），等比缩放
-          // 左侧窄图：同样以高度为基准；宽度=高度×(203/713) ≈ 0.2847，保证比例不变
-          backgroundSize: 'auto 90vh, calc(90vh * 0.2847) 90vh',
+          backgroundSize: '1265px 803px, 145px 657px',
         }}
       >
-        <header className="flex bg-transparent py-2 box-border">
-          <div className="w-full justify-between flex py-2 px-8 items-center">
-            <img src={logo} alt="Melfish logo" className="w-40 h-auto"></img>
-            <nav>
-              <ul className="group/menus flex text-white space-x-6 items-center">
+        <header className="relative bg-transparent box-border">
+          <img
+            src={logo}
+            alt="Melfish logo"
+            className="absolute left-[42px] top-[19px]"
+            style={{ width: "189.91px", height: "49.51px" }}
+          />
+          <nav className="absolute right-[60px] top-[31px]">
+            <ul
+              className="group/menus flex text-white items-center"
+              style={{ gap: "106px" }}
+            >
                 {/* About Us */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     About Us
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -56,18 +60,18 @@ function HeroHeader() {
                 </li>
 
                 {/* Products */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     Products
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -76,18 +80,18 @@ function HeroHeader() {
                 </li>
 
                 {/* Blog */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     Blog
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] w-0 rounded-full bg-white
+                        -bottom-2 h-[3px] w-0 rounded-full bg-white
                         opacity-0 transition-[opacity,width] duration-300 ease-out
                         group-hover:opacity-100 group-hover:w-[50px]
                       "
@@ -96,18 +100,18 @@ function HeroHeader() {
                 </li>
 
                 {/* See All Service —— 默认显示；当鼠标移到其它项时自动隐藏 */}
-                <li className="group">
+                <li className="group flex h-[25px] items-center">
                   <a
                     href="#"
-                    className="relative px-4 py-3 block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: paragraph }}
+                    className="relative block transition-colors duration-300"
+                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
                   >
                     See All Service
                     <span
                       aria-hidden
                       className="
                         pointer-events-none absolute left-1/2 -translate-x-1/2
-                        bottom-0 h-[3px] rounded-full bg-white
+                        -bottom-2 h-[3px] rounded-full bg-white
                         transition-[opacity,width] duration-300 ease-out
                         w-[50px] opacity-100
                         group-hover/menus:w-0 group-hover/menus:opacity-0   /* 鼠标在任何菜单项上时先收起 */
@@ -118,85 +122,94 @@ function HeroHeader() {
                 </li>
               </ul>
             </nav>
-          </div>
         </header>
-        <div className="h-[75vh] flex justify-center">
-          <div className="flex w-full max-w-6xl ml-10 place-items-center">
-            <div className="w-[58%] flex flex-col text-left">
-              <h1
-                className="font-bold text-black text-left w-[692px] leading-[95px]"
-                style={{ fontFamily: FF, fontSize: title }}
-              >
-                <span className="block">Your Technical Co–</span>
-                <span className="block">
-                  founder <span className="whitespace-nowrap">in&nbsp;Melbourne</span>
-                </span>
-              </h1>
+        <div
+          className="absolute"
+          style={{
+            top: "277px",
+            left: "320px",
+            width: "692px",
+            height: "190px",
+          }}
+        >
+          <h1
+            className="font-bold text-black text-left w-full"
+            style={{ fontFamily: FF, fontSize: title}}
+          >
+            Your Technical Co–
+            founder in Melbourne
+          </h1>
+        </div>
+        <div
+          className="absolute"
+          style={{
+            top: "476px",
+            left: "320px",
+            width: "506px",
+            height: "72px",
+          }}
+        >
+          <p
+            style={{fontFamily: FF,}}>
+            {/* 第一行：稍微收紧 0.3px，保证装进 506px */}
+            <span
+              className="block"
+              style={{ letterSpacing: "-0.3px" }}
+            >
+              We build, accelerate, and scale exceptional&nbsp;digital&nbsp;products
+            </span>
 
-              <p
-                className="mt-[16px] text-left text-black font-medium"
-                style={{
-                  width: "506px",        // 蓝湖宽度
-                  height: "72px",        // 两行总高
-                  fontFamily: FF,
-                  fontSize: "18px",
-                  lineHeight: "36.33px",
-                }}
-              >
-                {/* 第一行：稍微收紧 0.3px，保证装进 506px */}
-                <span
-                  className="block"
-                  style={{ letterSpacing: "-0.3px" }}
-                >
-                  We build, accelerate, and scale exceptional&nbsp;digital&nbsp;products
-                </span>
+            {/* 第二行：hands–on incubation 不拆开 */}
+            <span className="block">
+              through expert consulting and&nbsp;
+              <span className="whitespace-nowrap">hands–on incubation.</span>
+            </span>
+          </p>
+        </div>
+        <button
+          className="absolute flex items-center justify-center gap-3 text-white transition-all duration-200"
+          style={{
+            top: "585px",
+            left: "320px",
+            backgroundColor: isButtonHovered ? button_hover_color : button_color,
+            width: "191px",
+            height: "56px",
+            borderRadius: "28px",
+            boxShadow: isButtonHovered ? button_hover_shadow : "none",
+          }}
+          onMouseEnter={() => setIsButtonHovered(true)}
+          onMouseLeave={() => setIsButtonHovered(false)}
+        >
+          <span
+            className="font-medium"
+            style={{
+              color: "#FFFFFF",
+              fontFamily: FF,
+              fontSize: "16px",
+              lineHeight: "32.29px",
+            }}
+          >
+            See All Service
+          </span>
+          <img
+            src={buttonImage}
+            alt="See All Service"
+            className="h-4 w-4"
+          />
+        </button>
 
-                {/* 第二行：hands–on incubation 不拆开 */}
-                <span className="block">
-                  through expert consulting and&nbsp;
-                  <span className="whitespace-nowrap">hands–on incubation.</span>
-                </span>
-              </p>
-
-              <button
-                className="mt-8 flex items-center justify-center gap-3 text-white transition-all duration-200"
-                style={{
-                  backgroundColor: isButtonHovered ? button_hover_color : button_color,
-                  width: "191px",
-                  height: "56px",
-                  borderRadius: "28px",
-                  boxShadow: isButtonHovered ? button_hover_shadow : "none",
-                  transform: "translate(-16px, -16px)",
-                }}
-                onMouseEnter={() => setIsButtonHovered(true)}
-                onMouseLeave={() => setIsButtonHovered(false)}
-              >
-                <span
-                  className="font-medium"
-                  style={{
-                    color: "#FFFFFF",
-                    fontFamily: FF,
-                    fontSize: "16px",
-                    lineHeight: "32.29px",
-                  }}
-                >
-                  See All Service
-                </span>
-                <img
-                  src={buttonImage}
-                  alt="See All Service"
-                  className="h-4 w-4"
-                />
-              </button>
-            </div>
-            <div className="w-[52%]">
-              <img
-                src={cofoundeer}
-                alt="Technical Co-founder"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
+        <div className="absolute"
+        style={{
+          top: "115px",
+          left: "1040px",
+          width: "780px",
+          height: "657px",
+        }}>
+          <img
+            src={cofoundeer}
+            alt="Technical Co-founder"
+            className="w-full h-auto"
+          />
         </div>
       </section>
     </>
@@ -204,3 +217,4 @@ function HeroHeader() {
 }
 
 export default HeroHeader;
+
