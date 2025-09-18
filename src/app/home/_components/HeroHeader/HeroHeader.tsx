@@ -1,20 +1,16 @@
-import { useState } from "react";
 import logo from "./_assets/hero-logo.png";
 import cofoundeer from "./_assets/hero-illustration.png";
 import background1 from "./_assets/hero-bg-right.png";
 import background2 from "./_assets/hero-bg-left.png";
-import buttonImage from "./_assets/hero-cta-icon.png";
+import CTAButton from "../../../../_components/CTAButton";
+import buttonIcon from "./_assets/hero-cta-icon.png";
 
 const FF = "PingFang SC-Bold";
-// 颜色
-const button_color = "#2D7597";
-const button_hover_color = "#3385AB";
-const button_hover_shadow = "0 16px 32px rgba(0, 0, 0, 0.25)";
+
 
 // 字体大小常量
 const title = "67px";
 function HeroHeader() {
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
     <>
@@ -151,52 +147,28 @@ function HeroHeader() {
         >
           <p
             style={{fontFamily: FF,}}>
-            {/* 第一行：稍微收紧 0.3px，保证装进 506px */}
             <span
               className="block"
               style={{ letterSpacing: "-0.3px" }}
             >
               We build, accelerate, and scale exceptional&nbsp;digital&nbsp;products
             </span>
-
-            {/* 第二行：hands–on incubation 不拆开 */}
             <span className="block">
               through expert consulting and&nbsp;
               <span className="whitespace-nowrap">hands–on incubation.</span>
             </span>
           </p>
         </div>
-        <button
-          className="absolute flex items-center justify-center gap-3 text-white transition-all duration-200"
-          style={{
-            top: "585px",
-            left: "320px",
-            backgroundColor: isButtonHovered ? button_hover_color : button_color,
-            width: "191px",
-            height: "56px",
-            borderRadius: "28px",
-            boxShadow: isButtonHovered ? button_hover_shadow : "none",
-          }}
-          onMouseEnter={() => setIsButtonHovered(true)}
-          onMouseLeave={() => setIsButtonHovered(false)}
+        <div
+          className="absolute"
+          style={{ top: "585px", left: "320px" }}
         >
-          <span
-            className="font-medium"
-            style={{
-              color: "#FFFFFF",
-              fontFamily: FF,
-              fontSize: "16px",
-              lineHeight: "32.29px",
-            }}
-          >
-            See All Service
-          </span>
-          <img
-            src={buttonImage}
-            alt="See All Service"
-            className="h-4 w-4"
+          <CTAButton
+            label="See All Service"
+            iconSrc={buttonIcon}
           />
-        </button>
+        </div>
+
 
         <div className="absolute"
         style={{
@@ -217,4 +189,3 @@ function HeroHeader() {
 }
 
 export default HeroHeader;
-
