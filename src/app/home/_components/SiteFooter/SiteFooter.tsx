@@ -11,7 +11,7 @@ function SiteFooter() {
       className="relative w-screen left-1/2 -ml-[50vw] right-1/2 -mr-[50vw] text-white"
       style={{ backgroundColor: BG }}
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5">
+      <div className="mx-auto w-full max-w-[1360px] px-4 sm:px-8 lg:px-[40px] py-5">
         {/* 顶部：小屏堆叠，md 起与导航同列排布 */}
         <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
           {/* Logo */}
@@ -121,7 +121,7 @@ function SiteFooter() {
 
         {/* 细分割线 —— 1280px 宽，1px，白色10%，虚线，居中 */}
         <hr
-          className="mt-6 mx-auto w-full max-w-[1280px] border-0 border-t border-dashed border-white/10"
+          className="mt-6 mx-auto w-full max-w-[1360px] border-0 border-t border-dashed border-white/10"
         />
 
         {/* 中部：标题 + 副标题*/}

@@ -18,8 +18,8 @@ function HeroHeader() {
         backgroundSize: "min(1265px, 120vw) auto, min(145px, 30vw) auto",
       }}
     >
-      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1200px] flex-col px-6 pb-16 pt-8 sm:px-10 lg:px-16 lg:pt-10">
-        <header className="flex flex-wrap items-center justify-between gap-6 text-white">
+      <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1360px] flex-col px-4 pb-16 pt-8 sm:px-8 lg:px-[40px] lg:pt-10">
+        <header className="flex w-full flex-wrap items-center justify-between gap-6 text-white">
           <img
             src={logo}
             alt="Melfish logo"
