@@ -9,17 +9,23 @@ const FF = "PingFang SC-Bold";
 
 function HeroHeader() {
   return (
-    <section
-      className="relative overflow-hidden bg-no-repeat"
-      style={{
-        backgroundImage: `url(${background1}), url(${background2})`,
-        backgroundRepeat: "no-repeat, no-repeat",
-        backgroundPosition: "right top, left bottom",
-        backgroundSize: "min(1265px, 120vw) auto, min(145px, 30vw) auto",
-      }}
-    >
+    <section className="relative overflow-hidden bg-white">
+      <img
+        src={background1}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-0 top-0 hidden lg:block"
+        style={{ width: "min(1265px, 66vw)", maxWidth: "1265px", height: "auto" }}
+      />
+      <img
+        src={background2}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-10 left-0 hidden lg:block"
+        style={{ width: "min(145px, 18vw)", maxWidth: "145px", height: "auto" }}
+      />
       <div className="relative mx-auto flex min-h-[740px] w-full max-w-[1920px] flex-col px-4 pb-16 pt-8 sm:px-8 lg:px-[40px] lg:pt-10">
-        <header className="flex w-full flex-wrap items-center justify-between gap-6 text-white">
+        <header className="flex w-full flex-wrap items-center justify-between gap-6 text-[#74B4D4] lg:text-white">
           <img
             src={logo}
             alt="Melfish logo"
