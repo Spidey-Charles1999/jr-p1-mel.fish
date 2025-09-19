@@ -8,6 +8,8 @@ import fullStackConsultingImage from "./_assets/service-full-stack-consulting.pn
 import productIncubationImage from "./_assets/service-product-incubation.png";
 import technologyAccelerationImage from "./_assets/service-technology-acceleration.png";
 import dedicatedDevelopmentImage from "./_assets/service-dedicated-development.png";
+import CTAButton from "../../../../_components/CTAButton";
+import buttonIcon from "../HeroHeader/_assets/hero-cta-icon.png";
 import TitleWithCircle from "../../../../_components/TitleWithCircle";
 
 const button_color = "#2D7597";
@@ -41,7 +43,7 @@ function ServicesOverview() {
           <div className="mb-[88px]">
             <TitleWithCircle text={title} />
           </div>
-          <div className="mb-[124px]">
+          <div className="relative mb-[124px]">
             <h1
               className="font-bold"
               style={{ fontSize: small_title, fontFamily: FF }}
@@ -55,22 +57,20 @@ function ServicesOverview() {
               We provide end-to-end solutions to bring your digital ideas to
               life.
             </h3>
-            <button
-              className="flex items-center mt-8 space-x-3 py-2.5 px-4 rounded-full hover:bg-button_hover max-h-14"
-              style={{ backgroundColor: button_color }}
-            >
-              <h5
-                className="text-white"
-                style={{ fontSize: button, fontFamily: FF }}
-              >
-                Connect with our experts
-              </h5>
-            </button>
+            <CTAButton
+              className="mt-8"
+              label="Connect with our experts"
+              iconSrc={buttonIcon}
+              backgroundColor={button_color}
+              width="auto"
+              paddingX={32}
+              style={{ fontFamily: FF, fontSize: button }}
+            />
           </div>
         </div>
         <section className="space-y-12">
           <div
-            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-10 lg:grid-cols-[minmax(0,1fr)_260px] lg:min-h-[360px]"
+            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:min-h-[300px]"
             style={{
               backgroundImage: `url(${leftCardBackground})`,
               backgroundSize: "auto 100%",
@@ -90,9 +90,7 @@ function ServicesOverview() {
               >
                 Full-stack Consulting
               </h3>
-              <h5
-                style={{ fontSize: paragraph, fontFamily: FF }}
-              >
+              <h5 style={{ fontSize: paragraph, fontFamily: FF }}>
                 Expert guidance on architecture, tech stack, and bestpractices
                 for building robust and scalable applications
               </h5>
@@ -124,13 +122,13 @@ function ServicesOverview() {
               <img
                 src={fullStackConsultingImage}
                 alt="Full-stack Consulting"
-                className="h-64 w-64 object-contain"
+                className="h-64 w-64 object-contain -translate-x-10"
               ></img>
             </div>
           </div>
 
           <div
-            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:min-h-[360px]"
+            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:min-h-[300px]"
             style={{
               backgroundImage: `url(${rightCardBackground})`,
               backgroundSize: "auto 100%",
@@ -141,7 +139,7 @@ function ServicesOverview() {
               <img
                 src={productIncubationImage}
                 alt="Full-stack Consulting"
-                className="w-[11rem] object-contain"
+                className="w-[rem] object-contain translate-x-40"
               ></img>
             </div>
             <div className="grid gap-3 pr-10 text-right">
@@ -157,13 +155,14 @@ function ServicesOverview() {
               >
                 Product Incubation
               </h3>
-              <h5
-                style={{ fontSize: paragraph, fontFamily: FF }}
-              >
+              <h5 style={{ fontSize: paragraph, fontFamily: FF }}>
                 From idea to MVP, we partner with you to build, launch,and grow
                 your next big thing.
               </h5>
-              <div className="flex justify-end gap-3" style={{ fontSize: button, fontFamily: FF }}>
+              <div
+                className="flex justify-end gap-3"
+                style={{ fontSize: button, fontFamily: FF }}
+              >
                 <p
                   className="h-9 w-28 grid place-items-center"
                   style={{ backgroundColor: `${label}1A`, color: label }}
@@ -187,7 +186,7 @@ function ServicesOverview() {
           </div>
 
           <div
-            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-10 lg:grid-cols-[minmax(0,1fr)_260px] lg:min-h-[360px]"
+            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:min-h-[300px]"
             style={{
               backgroundImage: `url(${leftCardBackground})`,
               backgroundSize: "auto 100%",
@@ -207,9 +206,7 @@ function ServicesOverview() {
               >
                 Technology Acceleration
               </h3>
-              <h5
-                style={{ fontSize: paragraph, fontFamily: FF }}
-              >
+              <h5 style={{ fontSize: paragraph, fontFamily: FF }}>
                 Accelerate your development cycles and enhance yourteam's
                 capabilities with our hands-on expertise,
               </h5>
@@ -241,13 +238,13 @@ function ServicesOverview() {
               <img
                 src={technologyAccelerationImage}
                 alt="Full-stack Consulting"
-                className="w-[8rem] object-contain"
+                className="w-[8rem] object-contain -translate-x-45"
               ></img>
             </div>
           </div>
 
           <div
-            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:min-h-[360px]"
+            className="grid w-full items-center gap-8 bg-cover bg-no-repeat py-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:min-h-[300px]"
             style={{
               backgroundImage: `url(${rightCardBackground})`,
               backgroundSize: "auto 100%",
@@ -258,7 +255,7 @@ function ServicesOverview() {
               <img
                 src={dedicatedDevelopmentImage}
                 alt="Full-stack Consulting"
-                className="w-[15rem] object-contain"
+                className="w-[15rem] object-contain translate-x-30"
               ></img>
             </div>
             <div className="grid gap-3 pr-10 text-right">
@@ -274,13 +271,14 @@ function ServicesOverview() {
               >
                 Dedicated Development
               </h3>
-              <h5
-                style={{ fontSize: paragraph, fontFamily: FF }}
-              >
+              <h5 style={{ fontSize: paragraph, fontFamily: FF }}>
                 From idea to MVP, we partner with you to build, launch,and grow
                 your next big thing.
               </h5>
-              <div className="flex justify-end gap-3" style={{ fontSize: button, fontFamily: FF }}>
+              <div
+                className="flex justify-end gap-3"
+                style={{ fontSize: button, fontFamily: FF }}
+              >
                 <p
                   className="h-9 w-28 grid place-items-center"
                   style={{ backgroundColor: `${label}1A`, color: label }}
