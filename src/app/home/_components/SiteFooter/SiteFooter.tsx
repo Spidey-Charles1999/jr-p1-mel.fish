@@ -1,6 +1,7 @@
 
 import logo1x from "./_assets/footer-logo-1x.png";
 import logo2x from "./_assets/footer-logo-2x.png";
+import NavigationMenu from "../../../../_components/NavigationMenu";
 
 
 const BG = "#232F37 ";
@@ -8,7 +9,7 @@ const FF = "PingFang SC, PingFang SC";
 function SiteFooter() {
   return (
     <section
-      className="relative w-screen left-1/2 -ml-[50vw] right-1/2 -mr-[50vw] text-white"
+      className="relative w-screen h-[326px] left-1/2 -ml-[50vw] right-1/2 -mr-[50vw] text-white"
       style={{ backgroundColor: BG }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5">
@@ -17,133 +18,40 @@ function SiteFooter() {
           {/* Logo 单独一行（小屏） */}
           <a
             href="/"
-            className="inline-flex items-center justify-center md:justify-start w-[253px] h-[65.96px] shrink-0"
+            className="absolute w-[253px] h-[65.96px] right-[1347px] top-[50px]"
           >
             <img
               src={logo1x}
               srcSet={`${logo1x} 1x, ${logo2x} 2x`}
               alt="melfish"
-              className="h-9 w-auto"
+              className="w-[253px] h-[65.96px]"
               loading="lazy"
               decoding="async"
             />
           </a>
 
           {/* 导航：默认仅最后一个高亮；悬停时仅悬停项高亮 */}
-         <nav className="absolute right-[320px] top-[50px]">
-            <ul
-              className="group/menus flex text-white items-center"
-              style={{ gap: "106px" }}
-            >
-                {/* About Us */}
-                <li className="group flex h-[25px] items-center">
-                  <a
-                    href="#"
-                    className="relative block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                  >
-                    About Us
-                    <span
-                      aria-hidden
-                      className="
-                        pointer-events-none absolute left-1/2 -translate-x-1/2
-                        -bottom-2 h-[3px] w-0 rounded-full bg-white
-                        opacity-0 transition-[opacity,width] duration-300 ease-out
-                        group-hover:opacity-100 group-hover:w-[50px]
-                      "
-                    />
-                  </a>
-                </li>
-
-                {/* Products */}
-                <li className="group flex h-[25px] items-center">
-                  <a
-                    href="#"
-                    className="relative block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                  >
-                    Products
-                    <span
-                      aria-hidden
-                      className="
-                        pointer-events-none absolute left-1/2 -translate-x-1/2
-                        -bottom-2 h-[3px] w-0 rounded-full bg-white
-                        opacity-0 transition-[opacity,width] duration-300 ease-out
-                        group-hover:opacity-100 group-hover:w-[50px]
-                      "
-                    />
-                  </a>
-                </li>
-
-                {/* Blog */}
-                <li className="group flex h-[25px] items-center">
-                  <a
-                    href="#"
-                    className="relative block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                  >
-                    Blog
-                    <span
-                      aria-hidden
-                      className="
-                        pointer-events-none absolute left-1/2 -translate-x-1/2
-                        -bottom-2 h-[3px] w-0 rounded-full bg-white
-                        opacity-0 transition-[opacity,width] duration-300 ease-out
-                        group-hover:opacity-100 group-hover:w-[50px]
-                      "
-                    />
-                  </a>
-                </li>
-
-                {/* See All Service —— 默认显示；当鼠标移到其它项时自动隐藏 */}
-                <li className="group flex h-[25px] items-center">
-                  <a
-                    href="#"
-                    className="relative block transition-colors duration-300"
-                    style={{ fontFamily: FF, fontSize: "18px", lineHeight: "25px" }}
-                  >
-                    See All Service
-                    <span
-                      aria-hidden
-                      className="
-                        pointer-events-none absolute left-1/2 -translate-x-1/2
-                        -bottom-2 h-[3px] rounded-full bg-white
-                        transition-[opacity,width] duration-300 ease-out
-                        w-[50px] opacity-100
-                        group-hover/menus:w-0 group-hover/menus:opacity-0   /* 鼠标在任何菜单项上时先收起 */
-                        hover:!w-[50px] hover:!opacity-100                  /* 如果正好悬停在本项，再展开 */
-                      "
-                    />
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
-
+          <NavigationMenu
+            className="absolute right-[320px] top-[75px]"
+          />
         </div>
-
-        {/* 细分割线 —— 1280px 宽，1px，白色10%，虚线，居中 */}
         <hr
-          className="mt-6 mx-auto w-[1280px] border-0 border-t border-dashed border-white/10"
+          className="absolute w-[1280px] border-0 border-t border-white/10 right-[320px] top-[172px]"
         />
 
         {/* 中部：标题 + 副标题*/}
         <div className="py-8">
           
           <h1
-            className="mx-auto w-[411px] text-center text-[24px] leading-[34px] font-bold text-white tracking-tight"
+            className="absolute w-[411px] h-[34px] text-center text-[24px] leading-[34px] font-bold text-white tracking-tight right-[755px] top-[209px]"
             style={{
-              fontFamily: '"PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif',
+              fontFamily: FF,
             }}
           >
             Technical Excellence You Can Trust
           </h1>
-
-        
           <p
-            className="
-              mx-auto mt-3 text-center font-medium whitespace-nowrap px-4
-            "
+            className="absolute mx-auto mt-3 text-center font-medium whitespace-nowrap px-4 right-[590px] top-[253px]"
             style={{
               color: "#5DAFCF",
               fontFamily: '"PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif',
