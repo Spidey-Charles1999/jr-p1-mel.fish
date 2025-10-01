@@ -1,7 +1,7 @@
 
 import logo1x from "./_assets/footer-logo-1x.png";
 import logo2x from "./_assets/footer-logo-2x.png";
-import NavigationMenu from "../../../../_components/NavigationMenu";
+import NavigationMenu from "../../../_components/NavigationMenu";
 
 
 const BG = "#232F37 ";

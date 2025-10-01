@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
-import TitleWithCircle from "../../../../_components/TitleWithCircle";
-import CTAButton from "../../../../_components/CTAButton";
+import TitleWithCircle from "../../../_components/TitleWithCircle";
+import CTAButton from "../../../_components/CTAButton";
 
 import startups1x from "./_assets/audience-startups-1x.png";
 import startups2x from "./_assets/audience-startups-2x.png";

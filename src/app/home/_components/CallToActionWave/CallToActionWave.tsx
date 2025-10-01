@@ -1,7 +1,7 @@
 import wave1x from "./_assets/wave-mask.png";      
 import wave2x from "./_assets/wave-mask@2x.png";   
 
-import CTAButton from "../../../../_components/CTAButton";
+import CTAButton from "../../../_components/CTAButton";
 import arrow1x from "./_assets/wave-cta-icon.png";
 
 
