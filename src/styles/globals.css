@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+:root {
+  /* background */
+  --background: #FFFFFF;
+  --foreground: #000000; 
+  --foreground-70: #000000b3; 
+  --background-secondary: #F7F7F7; 
+  --background-tertiary: #F1FAFD; 
+  --wave: #F2FAFE; 
+  --footer: #232F37;
+  --footer-foreground: #5DAFCF; 
+  --button-foreground: #FFFFFF; 
+  --button: #2D7597; 
+  --button-hover: #1B5875;
+  --muted-foreground: #3F494Eb3; 
+  --accent-light: #1E778F; 
+  --accent: #71C6E5; 
+  --lable: #FD933F; 
+  --lable-10: #FD933F1A; 
+  --lable-bg: #FFF5EC; 
+  --border: #2D759733; 
+  --border-white: #FFFFFF; 
+  --border-white-10: #FFFFFF1A; 
+  --radius: 1.75rem;
+  --font-primary: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--button);
+  --color-primary-foreground: var(--button-foreground);
+  --color-secondary: var(--background-secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--background-tertiary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-border-inverse: var(--border-white);
+  --color-border-inverse-soft: var(--border-white-10);
+  --color-input: var(--background-secondary);
+  --color-ring: var(--accent-light);
+  --color-footer-background: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-accent-light: var(--accent-light);
+  --color-accent-label: var(--lable);
+  --color-accent-label-soft: var(--lable-10);
+  --color-accent-label-background: var(--lable-bg);
+  --font-sans: var(--font-primary);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
