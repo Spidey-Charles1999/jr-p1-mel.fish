@@ -3,7 +3,7 @@ import wave2x from "./_assets/wave-mask@2x.png";
 
 import CTAButton from "../../../_components/CTAButton";
 import arrow1x from "./_assets/wave-cta-icon.png";
-
+import Container from "./_components";
 
 const CTA_URL = "#"; // 按需替换
 const BG_TOP = "#F7F7F7"; // 整体背景色
@@ -32,8 +32,7 @@ function CallToActionWave() {
       />
 
     {/* 内容容器*/}
-    <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-      <div className="mx-auto max-w-[951px]">
+    <Container>
         <h2
           className="
             font-bold                
@@ -65,8 +64,7 @@ function CallToActionWave() {
           }}
         />
 
-      </div>
-    </div>
+    </Container>
 
     </section>
   );
