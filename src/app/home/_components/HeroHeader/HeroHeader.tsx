@@ -2,7 +2,7 @@ import logo from "./_assets/hero-logo.png";
 import cofoundeer from "./_assets/hero-illustration.png";
 import background1 from "./_assets/hero-bg-right.png";
 import background2 from "./_assets/hero-bg-left.png";
-import CTAButton from "../../../_components/CTAButton";
+import CTAButton from "../../../_components/Button";
 import NavigationMenu from "../../../_components/NavigationMenu";
 import buttonIcon from "./_assets/hero-cta-icon.png";
 

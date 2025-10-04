@@ -13,6 +13,7 @@
   --button-foreground: #FFFFFF; 
   --button: #2D7597; 
   --button-hover: #1B5875;
+  --button-hover-shadow: 0 16px 32px rgba(27, 88, 117, 0.35);
   --muted-foreground: #3F494Eb3; 
   --accent-light: #1E778F; 
   --accent: #71C6E5; 
@@ -54,4 +55,14 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer components {
+  .btn-base {
+    @apply relative bg-primary h-[3.5rem] py-[0.75rem] inline-flex items-center justify-center rounded-lg text-[16px] text-background font-sans transition-all duration-400 cursor-pointer shadow-none;
+  }
+
+  .btn-hover-shadow {
+    @apply hover:shadow-[var(--button-hover-shadow)];
+  }
 }
