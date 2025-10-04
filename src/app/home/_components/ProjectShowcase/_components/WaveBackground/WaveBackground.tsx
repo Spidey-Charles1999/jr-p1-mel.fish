@@ -16,3 +16,4 @@ export default function WaveBackground({ className = "" }: WaveBackgroundProps) 
   );
 }
 
+
