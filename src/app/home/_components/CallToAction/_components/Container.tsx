@@ -1,5 +1,5 @@
 import type { FC, PropsWithChildren } from "react";
-import wave1x from "../_assets/wave-mask.png";
+import wave1x from "../_assets/wave-mask@1x.png";
 import wave2x from "../_assets/wave-mask@2x.png";
 
 const Container: FC<PropsWithChildren> = ({ children }) => (
