@@ -1,99 +1,88 @@
-import { forwardRef } from "react";
-import type { CSSProperties, HTMLAttributes } from "react";
+import classNames from "classnames";
+import { useState } from "react";
+import type { CSSProperties, FC, HTMLAttributes } from "react";
+import { tv, type VariantProps } from "tailwind-variants";
 
-const DEFAULT_FONT_FAMILY =
-  '"PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif';
+const navigationMenu = tv({
+  base: "flex items-center text-[1.125rem] font-sans transition-colors duration-300",
+  variants: {
+    variant: {
+      header: "",
+      footer: "",
+    },
+  },
+  defaultVariants: {
+    variant: "header",
+  },
+});
 
-export type NavigationMenuItem = {
-  /** 菜单文案 */
-  label: string;
-  /** 菜单链接 */
-  href: string;
-  /** 是否默认高亮（展开下划线） */
-  highlight?: boolean;
-  /** 单独覆盖当前项的文字颜色 */
-  textColor?: string;
-};
+type NavigationMenuProps = HTMLAttributes<HTMLElement> & VariantProps<typeof navigationMenu>;
 
-export type NavigationMenuProps = HTMLAttributes<HTMLElement> & {
-  /** 菜单数据，默认包含四个固定项 */
-  items?: NavigationMenuItem[];
-  /** 菜单项之间的间距，默认 106px */
-  gap?: number | string;
-  /** 默认字体 */
-  fontFamily?: string;
-  /** 默认字号 */
-  fontSize?: number | string;
-  /** 默认行高 */
-  lineHeight?: number | string;
-  /** 默认文字颜色 */
-  textColor?: string;
-};
-
-const DEFAULT_ITEMS: NavigationMenuItem[] = [
+const LINKS = [
   { label: "About Us", href: "#" },
   { label: "Products", href: "#" },
   { label: "Blog", href: "#" },
   { label: "See All Service", href: "#", highlight: true },
 ];
 
-const NavigationMenu = forwardRef<HTMLElement, NavigationMenuProps>(
-  (
-    {
-      items = DEFAULT_ITEMS,
-      gap = "106px",
-      fontFamily = DEFAULT_FONT_FAMILY,
-      fontSize = "18px",
-      lineHeight = "25px",
-      textColor = "#FFFFFF",
-      className = "",
-      ...rest
-    },
-    ref
-  ) => {
-    return (
-      <nav ref={ref} className={className} {...rest}>
-        <ul
-          className="group/navigation-menu flex items-center"
-          style={{ gap }}
-        >
-          {items.map(({ label, href, highlight, textColor: itemColor }) => {
-            const linkStyle: CSSProperties = {
-              fontFamily,
-              fontSize,
-              lineHeight,
-              color: itemColor ?? textColor,
-            };
+const NavigationMenu: FC<NavigationMenuProps> = ({ className = "", variant }) => {
+  const [hovered, setHovered] = useState<string | null>(null);
 
-            const underlineBaseClasses =
-              "pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-2 h-[3px] rounded-full transition-[opacity,width] duration-300 ease-out";
+  return (
+    <nav className={classNames(navigationMenu({ variant }), className)}>
+      <ul className="flex items-center gap-[6.625rem]">
+        {LINKS.map(({ label, href, highlight }) => {
+          const isHovered = hovered === label;
+          const someoneElseHovered = hovered !== null && hovered !== label;
 
-            const underlineClassName = highlight
-              ? `${underlineBaseClasses} w-[50px] opacity-100 group-hover/navigation-menu:w-0 group-hover/navigation-menu:opacity-0 hover:!w-[50px] hover:!opacity-100`
-              : `${underlineBaseClasses} w-0 opacity-0 group-hover:w-[50px] group-hover:opacity-100`;
+        const baseLink = "relative block font-medium transition-colors duration-300 hover:text-white focus-visible:text-white";
 
-            return (
-              <li key={label} className="group relative flex h-[25px] items-center">
-                <a
-                  href={href}
-                  className="relative block transition-colors duration-300"
-                  style={linkStyle}
-                >
-                  {label}
-                  <span
-                    aria-hidden
-                    className={`${underlineClassName} bg-white`}
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    );
-  }
-);
+        const finalColorClass = classNames(
+          baseLink,
+          highlight
+            ? variant === "footer"
+              ? someoneElseHovered && !isHovered
+                ? "text-white/70"
+                : "text-white"
+              : "text-white"
+            : isHovered
+            ? "text-white"
+            : variant === "footer"
+            ? "text-white/70"
+            : "text-white"
+        );
 
-NavigationMenu.displayName = "NavigationMenu";
+          const shouldUnderline = highlight ? !someoneElseHovered || isHovered : isHovered;
+
+          const underlineStyle: CSSProperties = {
+            width: shouldUnderline ? "3.125rem" : "0",
+            opacity: shouldUnderline ? 1 : 0,
+            transition: "width 300ms ease-out, opacity 300ms ease-out",
+            left: "50%",
+            transform: "translateX(-50%)",
+          };
+
+          return (
+            <li
+              key={label}
+              className="relative flex h-[1.5625rem] items-center"
+              onMouseEnter={() => setHovered(label)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <a href={href} className={finalColorClass}>
+                {label}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -bottom-2 h-[0.1875rem] rounded-full bg-white"
+                  style={underlineStyle}
+                />
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
 
 export default NavigationMenu;
