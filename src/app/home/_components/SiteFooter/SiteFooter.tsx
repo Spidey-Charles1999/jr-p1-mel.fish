@@ -2,7 +2,7 @@ import Logo from "../../../_components/Logo";
 import NavigationMenu from "../../../_components/NavigationMenu";
 
 
-const BG = "#232F37 ";
+const BG = "#232F32 ";
 const FF = "PingFang SC, PingFang SC";
 function SiteFooter() {
   return (
@@ -19,8 +19,6 @@ function SiteFooter() {
             size="lg"
             alt="Melfish"
           />
-
-          
           <NavigationMenu variant="footer" />
         </div>
         <hr
