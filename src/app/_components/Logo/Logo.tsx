@@ -7,8 +7,8 @@ import logo2x from "./_assets/logo@2x.png";
 const logo = tv({
   variants: {
     size: {
-      sm: "h-[3.094rem] w-[11.869rem]",
-      lg: "h-[4.1225rem] w-[15.8125rem]",
+      sm: "w-[clamp(8rem, 25vw, 11.869rem)] h-auto",
+      lg: "w-[clamp(10rem, 30vw, 15.8125rem)] h-auto",
     },
   },
   defaultVariants: {
