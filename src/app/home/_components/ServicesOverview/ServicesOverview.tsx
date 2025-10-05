@@ -9,7 +9,7 @@ import productIncubationImage from "./_assets/service-product-incubation.png";
 import technologyAccelerationImage from "./_assets/service-technology-acceleration.png";
 import dedicatedDevelopmentImage from "./_assets/service-dedicated-development.png";
 import CTAButton from "../../../_components/Button";
-import buttonIcon from "../HeroHeader/_assets/hero-cta-icon.png";
+
 import TitleWithCircle from "../../../_components/TitleWithCircle";
 
 const button_color = "#2D7597";
@@ -57,15 +57,6 @@ function ServicesOverview() {
               We provide end-to-end solutions to bring your digital ideas to
               life.
             </h3>
-            <CTAButton
-              className="mt-8"
-              label="Connect with our experts"
-              iconSrc={buttonIcon}
-              backgroundColor={button_color}
-              width="auto"
-              paddingX={32}
-              style={{ fontFamily: FF, fontSize: button }}
-            />
           </div>
         </div>
         <section className="space-y-12">

@@ -9,7 +9,7 @@ const button = tv({
   variants: {
     size: {
       hu: "w-[7.3125rem] pl-[1.9375rem]",
-      sas: "w-[11.9375rem] pl-[1.8125rem]",
+      sas: "w-[11.9375rem] pl-[1.8125rem] pr-[2.9rem]",
       cwoe: "w-[15.1875rem] pl-[1.75rem]",
       cwoea: "w-[16.5rem] pl-[1.5625rem] pr-[2.9rem]",
     },
