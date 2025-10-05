@@ -1,10 +1,8 @@
-
-import logo1x from "./_assets/footer-logo-1x.png";
-import logo2x from "./_assets/footer-logo-2x.png";
+import Logo from "../../../_components/Logo";
 import NavigationMenu from "../../../_components/NavigationMenu";
 
 
-const BG = "#232F37 ";
+const BG = "#232F32 ";
 const FF = "PingFang SC, PingFang SC";
 function SiteFooter() {
   return (
@@ -14,26 +12,14 @@ function SiteFooter() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5">
         {/* 顶部：小屏两行，md 及以上同一行 */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        
           {/* Logo 单独一行（小屏） */}
-          <a
-            href="/"
-            className="absolute w-[253px] h-[65.96px] right-[1347px] top-[50px]"
-          >
-            <img
-              src={logo1x}
-              srcSet={`${logo1x} 1x, ${logo2x} 2x`}
-              alt="melfish"
-              className="w-[253px] h-[65.96px]"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-
-          {/* 导航：默认仅最后一个高亮；悬停时仅悬停项高亮 */}
-          <NavigationMenu
-            className="absolute right-[320px] top-[75px]"
+          <Logo
+            className=""
+            size="lg"
+            alt="Melfish"
           />
+          <NavigationMenu variant="footer" />
         </div>
         <hr
           className="absolute w-[1280px] border-0 border-t border-white/10 right-[320px] top-[172px]"
@@ -64,7 +50,7 @@ function SiteFooter() {
           </p>
 
         </div>
-      </div>
+      
   </section>
   );
 }

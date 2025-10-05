@@ -8,7 +8,7 @@ import fullStackConsultingImage from "./_assets/service-full-stack-consulting.pn
 import productIncubationImage from "./_assets/service-product-incubation.png";
 import technologyAccelerationImage from "./_assets/service-technology-acceleration.png";
 import dedicatedDevelopmentImage from "./_assets/service-dedicated-development.png";
-import CTAButton from "../../../_components/CTAButton";
+import CTAButton from "../../../_components/Button";
 import buttonIcon from "../HeroHeader/_assets/hero-cta-icon.png";
 import TitleWithCircle from "../../../_components/TitleWithCircle";
 
