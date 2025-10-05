@@ -66,3 +66,23 @@
     @apply hover:shadow-[var(--button-hover-shadow)];
   }
 }
+
+@layer components {
+  .hero-bg {
+    min-height: 55.63rem;
+    background-color: var(--background);
+    background-image: url("../app/home/_components/HeroHeader/_assets/hero-bg-right.png"),
+      url("../app/home/_components/HeroHeader/_assets/hero-bg-left.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;
+    background-size: 79.0625rem 50.1875rem, 9.0625rem 41.0625rem;
+  }
+
+  .hero-illustration {
+    position: absolute;
+    top: 7.1875rem;
+    right: 20.5rem;
+    width: 48.75rem;
+    height: 41.0625rem;
+  }
+}
