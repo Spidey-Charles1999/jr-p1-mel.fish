@@ -28,7 +28,7 @@ const Button: FC<Props> = ({
   showArrow = false,
 }) => (
   <button className={classNames(button({ size }), className)}>
-    <span className="leading-none">{children}</span>
+    <span className="leading-none mr-[0.2rem]">{children}</span>
     {showArrow ? (
       <img
         src={arrow1x}
@@ -36,13 +36,7 @@ const Button: FC<Props> = ({
         alt=""
         aria-hidden
         draggable={false}
-        className="absolute"
-        style={{
-          width: "clamp(0.875rem, 1vw, 1.25rem)",
-          height: "clamp(0.875rem, 1vw, 1.25rem)",
-          top: "1.375rem",
-          right: "1.625rem",
-        }}
+        className="absolute top-[1.375rem] right-[1.625rem] w-[1rem] h-[1rem]"
       />
     ) : null}
   </button>
