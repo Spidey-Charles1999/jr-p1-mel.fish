@@ -17,9 +17,9 @@ export default function ProjectShowcase() {
   return (
     <section className="relative overflow-hidden font-sans">
       {/* 背景波浪 */}
-      <WaveBackground className="pointer-events-none absolute inset-x-0 bottom-0 h-[240px] -z-10" />
+      <WaveBackground className="pointer-events-none absolute inset-x-0 bottom-0 h-[240px] z-0" />
 
-      <div className="relative container mx-auto max-w-[1360px] px-6 md:px-10 py-12 lg:py-16">
+      <div className="relative z-10 container mx-auto max-w-[1360px] px-6 md:px-10 py-12 lg:py-16">
         {/* 标题 */}
         <div className="pb-[100px]">
           <TitleWithCircle text={title} />

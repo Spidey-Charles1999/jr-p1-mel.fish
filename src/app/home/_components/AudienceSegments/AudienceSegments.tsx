@@ -18,11 +18,11 @@ export default function AudienceSegments() {
         src={audienceMask1x}
         srcSet={`${audienceMask1x} 1x, ${audienceMask2x} 2x`}
         alt=""
-        className="pointer-events-none absolute -z-10 right-0 inset-y-0 hidden h-full w-auto object-contain md:block"
+        className="pointer-events-none absolute z-0 right-0 inset-y-0 hidden h-full w-auto object-contain md:block"
       />
 
       {/* content container */}
-      <div className="mx-auto container max-w-[1360px] px-6 md:px-10">
+      <div className="relative z-10 mx-auto container max-w-[1360px] px-6 md:px-10">
         <TitleWithCircle text="Your Technical Co-founder in Melbourne for everyone" />
 
         {/* 介绍段落（rem 排版） */}
