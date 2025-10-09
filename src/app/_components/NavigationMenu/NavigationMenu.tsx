@@ -86,3 +86,4 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ className = "", variant }) =>
 };
 
 export default NavigationMenu;
+export type { NavigationMenuProps };
